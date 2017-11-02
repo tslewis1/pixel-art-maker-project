@@ -5,8 +5,9 @@ let widthBox = $("#input_width");
 
 let heightBox = $("#input_height");
 
-$("input[type=submit]").click(function() {
+$("#sizePicker").submit(function(event) {
 	makeGrid();
+	event.preventDefault();
 })
 
 // When size is submitted by the user, call makeGrid()

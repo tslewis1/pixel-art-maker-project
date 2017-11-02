@@ -5,6 +5,9 @@ let widthBox = $("#input_width");
 
 let heightBox = $("#input_height");
 
+$("input[type=submit]").click(function() {
+	makeGrid();
+})
 
 // When size is submitted by the user, call makeGrid()
 

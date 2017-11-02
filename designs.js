@@ -1,16 +1,21 @@
 // Select color input
 // Select size input
 
-// Define variables for width and height of grid
+let widthBox = $("#input_width");
 
-let width = $("#input_width").val();
-
-let height = $("#input_height").val();
+let heightBox = $("#input_height");
 
 
 // When size is submitted by the user, call makeGrid()
 
 function makeGrid() {
+
+// Define variables for width and height of grid
+
+	let width = widthBox.val();
+
+	let height = heightBox.val();
+
 
 // This for loop creates each table row and cell that the user inputs as width and height
 

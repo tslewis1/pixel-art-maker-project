@@ -1,7 +1,3 @@
-// Select color input
-
-let color = document.getElementById("color");
-
 // Select size input
 
 let widthBox = $("#input_width");
@@ -11,6 +7,20 @@ let heightBox = $("#input_height");
 $("#sizePicker").submit(function(event) {
 	makeGrid();
 	event.preventDefault();
+});
+
+// Select color input
+// Pull selected color from color picker and when clicking table cells, the color fills in
+
+let color;
+
+$("#colorPicker").change(function() {
+	color = $("#colorPicker").val();
+});
+
+$("#pixel_canvas").on("click", "tr td", function () {
+	$(this).toggleClass("selected");
+	$(".selected").css('background-color', color);
 });
 
 // When size is submitted by the user, call makeGrid()
@@ -37,9 +47,3 @@ function makeGrid() {
 	};
 
 };
-
-// Pull selected color from color picker and when clicking table cells, the color fills in
-
-// $("table").on("click", "td", function() {
-// 	$("td").css('background-color', color);
-// });

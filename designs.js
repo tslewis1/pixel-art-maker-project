@@ -1,6 +1,6 @@
 // Select color input
 
-let colorPicked = $("#colorPicker");
+let color = document.getElementById("color");
 
 // Select size input
 
@@ -23,6 +23,9 @@ function makeGrid() {
 
 	let height = heightBox.val();
 
+// Clear grid before making a new one
+
+	$("#pixel_canvas").empty();
 
 // For loop creates each table row and cell that the user inputs as width and height
 
@@ -34,3 +37,9 @@ function makeGrid() {
 	};
 
 };
+
+// Pull selected color from color picker and when clicking table cells, the color fills in
+
+// $("table").on("click", "td", function() {
+// 	$("td").css('background-color', color);
+// });

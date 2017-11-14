@@ -12,15 +12,14 @@ $("#sizePicker").submit(function(event) {
 // Select color input
 // Pull selected color from color picker and when clicking table cells, the color fills in
 
-let color;
+let color = "#000000";
 
-$("#colorPicker").change(function() {
+$("#colorPicker").change(function () {
 	color = $("#colorPicker").val();
 });
 
 $("#pixel_canvas").on("click", "tr td", function () {
-	$(this).toggleClass("selected");
-	$(".selected").css('background-color', color);
+	$(this).css('background-color', color);
 });
 
 // When size is submitted by the user, call makeGrid()

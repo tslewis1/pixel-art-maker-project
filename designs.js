@@ -22,6 +22,16 @@ $("#pixel_canvas").on("click", "tr td", function () {
 	$(this).css('background-color', color);
 });
 
+
+$("#pixel_canvas").on("click", "tr td", function () {
+	if($(this).css('background-color') != null) {
+		
+	} 
+	else {
+
+	};
+});
+
 // When size is submitted by the user, call makeGrid()
 
 function makeGrid() {

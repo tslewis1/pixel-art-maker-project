@@ -12,23 +12,19 @@ $("#sizePicker").submit(function(event) {
 // Select color input
 // Pull selected color from color picker and when clicking table cells, the color fills in
 
-let color = "#000000";
+let color = "#FFF";
 
 $("#colorPicker").change(function () {
 	color = $("#colorPicker").val();
 });
 
 $("#pixel_canvas").on("click", "tr td", function () {
-	$(this).css('background-color', color);
-});
-
-
-$("#pixel_canvas").on("click", "tr td", function () {
-	if($(this).css('background-color') != null) {
-		
-	} 
-	else {
-
+	// alert ($(this).css('background-color'));
+	if ($(this).css('background-color') == 'rgba(0, 0, 0, 0)') {
+		this.style.backgroundColor = color;
+	} else {
+		// alert ($(this).css('background-color'));
+		this.style.backgroundColor = 'rgba(0, 0, 0, 0)';
 	};
 });
 
